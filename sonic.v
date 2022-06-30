@@ -1,6 +1,6 @@
 module sonic # (parameter WIDTH = 30)
 (
-	input clk,
+	input clk, // 5MHz
 	input echo, // Arduino D2
 	input [WIDTH-1:0] counter,
 	output reg trig, // Arduino D3

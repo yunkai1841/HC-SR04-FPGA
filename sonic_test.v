@@ -20,3 +20,13 @@ module sonic_test(
 //	assign LED = debug;
 	assign LED2 = KEY[0] ? sonic_out[15:0] : sonic_out[31:16];
 endmodule
+
+module simple_counter(
+	input CLOCK_50,
+	output reg [31:0] counter_out);
+	
+	always @ (posedge CLOCK_50)
+	begin
+		counter_out <= #1 counter_out+1;
+	end
+endmodule
